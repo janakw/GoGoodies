@@ -1,0 +1,1 @@
+import { supa } from "../config/config.js"; //hier greifen wir auf unsere config datei zu um auf supabase zuzugreifen
