@@ -1,0 +1,154 @@
+/* Die Schriftart 'Audiowide' importieren */
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+/*Login Page*/
+
+/* Für alle Textelemente auf der Seite die Schriftart 'Audiowide' verwenden */
+body {
+    font-family: 'Audiowide', sans-serif;
+}
+
+#loginPage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.title {
+    color: #000;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Audiowide;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 233px;
+  /*  muessi no hinzufiege klappt aber grad nit 
+    width: 287px;
+    height: 140px; */
+  }
+
+  .ueberschrift {
+    color: #000;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px; /* Fügt 20px Abstand zu allen Seiten hinzu */
+}
+
+/* E-Mail oder Benutzername */
+.container {
+    display: flex;
+    align-items: center; /* Ändere align-items auf center, um die Elemente vertikal zentriert anzuzeigen */
+    height: 100vh;
+    flex-direction: column; /* Ändere die Richtung auf column, um die Elemente untereinander anzuzeigen */
+  }
+  
+  .kaestchen {
+    width: 300px;
+    height: 40px;
+    background: #E0D9AD;
+    border-radius: 20px;
+    flex-shrink: 0;
+    display: block; /* Ändere display auf block, um die Elemente vertikal anzuzeigen */
+    margin-top: 2px ; /* Fügt 20px Margin oben und unten hinzu */
+  }
+  
+  /* Passwort */
+  .kaestchen.passwort {
+    margin: 20px ; /* Fügt 20px Margin oben und unten hinzu */
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .text {
+    color: #000;
+    font-family: Audiowide;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+  }
+  
+  .input {
+    display: none; /* Am Anfang ausblenden */
+  }
+
+  .anmelden-button {
+    background: #E096C9;
+    border-radius: 20px;
+    width: 170px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-top: 36px;
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .anmelden-button-text {
+    color: #000;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .subtitle {
+    margin-top: 27px;
+    margin-bottom: 6px;
+    color: #000;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .registrieren-button {
+    background: #E096C9;
+    border-radius: 20px;
+    width: 120px;
+    height: 35px;
+    flex-shrink: 0;
+    margin-top: 4px;
+    margin-bottom: 69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .registrieren-button-text {
+    color: #000;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+ 
+  
+  
+
+
+
+
+  
