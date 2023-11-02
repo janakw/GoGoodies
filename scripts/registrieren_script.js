@@ -1,3 +1,5 @@
+import { supa } from "../config/config.js";
+
 document.addEventListener('DOMContentLoaded', function() {
     const emailText = document.getElementById('emailplaceholder');
     const emailInput = document.getElementById('emailinputField');
@@ -7,7 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwortInput = document.getElementById('passwortInputField');
     const passwortwiederholenText = document.getElementById('passwortwiederholenPlaceholder');
     const passwortwiederholenInput = document.getElementById('passwortwiederholenInputField');
-    const Kontoerstellen = document.querySelector('.Konto-erstellen');
+    const Kontoerstellen = document.querySelector('#Kontoerstellen');
+
+    const email = document.getElementById('emailinputField').value;
+    const password = document.getElementById('passwortInputField').value;
+    const passwortwiederholen = document.getElementById('passwortwiederholenInputField').value;
 
     function togglePlaceholder(textElement, inputElement) {
         textElement.style.display = 'none';
@@ -30,14 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         restorePlaceholder(emailText, emailInput);
     });
 
-    benutzernameText.addEventListener('click', function() {
-        togglePlaceholder(benutzernameText, benutzernameInput);
-    });
-
-    benutzernameInput.addEventListener('blur', function() {
-        restorePlaceholder(benutzernameText, benutzernameInput);
-    });
-
     passwortText.addEventListener('click', function() {
         togglePlaceholder(passwortText, passwortInput);
     });
@@ -53,8 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
     passwortwiederholenInput.addEventListener('blur', function() {
         restorePlaceholder(passwortwiederholenText, passwortwiederholenInput);
     });
-    Kontoerstellen.addEventListener('click', function() {
-        // Hier setzt du die Weiterleitungs-URL ein, zu der der Button führen soll
-        window.location.href = 'Login Page.html';
-      });
+   
+});
+
+
+// Function to sign up using email and password
+async function registrieren() {
+
+     // Check if either of the fields is empty or if they don't match
+ if (password === '' || passwortwiederholen === '' || password !== passwortwiederholen) {
+    alert('Gib das gleiche Passwort zwei Mal ein');
+  } else {
+     const { error } = await supa.auth.signUp({email, password});
+  }
+
+    if (error) {
+        console.error("Error during sign up: ", error.message);
+    } else {
+        console.log("Signed up as ", email);
+    }
+}
+
+Kontoerstellen.addEventListener('click', function() {
+    // Hier setzt du die Weiterleitungs-URL ein, zu der der Button führen soll
+    registrieren();
 });

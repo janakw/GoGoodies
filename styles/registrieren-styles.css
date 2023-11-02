@@ -54,6 +54,7 @@ body {
     border-radius: 20px;
     flex-shrink: 0;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .kaestchen.benutzername {
@@ -66,7 +67,7 @@ body {
   }
 
   .kaestchen.passwort.wiederholen {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
   .content {
     display: flex;

@@ -4,21 +4,23 @@ import { supa } from "../config/config.js"; //hier greifen wir auf unsere config
 
 document.addEventListener('DOMContentLoaded', function() {
     const text = document.getElementById('placeholder');
-    const input = document.getElementById('inputField');
+    const emailInput = document.getElementById('emailInputField');
     const passwortText = document.getElementById('passwortPlaceholder');
     const passwortInput = document.getElementById('passwortInputField');
-    const registrierenButton = document.querySelector('.registrieren-button');
+    const registrierenButton = document.querySelector('#registrieren-button');
+    const anmeldenButton = document.querySelector('#anmelden-button');
+
   
     text.addEventListener('click', function() {
       text.style.display = 'none'; // Text ausblenden
-      input.style.display = 'block'; // Texteingabefeld einblenden
-      input.focus(); // Texteingabefeld aktivieren
+      emailInput.style.display = 'block'; // Texteingabefeld einblenden
+      emailInput.focus(); // Texteingabefeld aktivieren
     });
   
-    input.addEventListener('blur', function() {
-      if (input.value === '') {
+    emailInput.addEventListener('blur', function() {
+      if (emailInput.value === '') {
         text.style.display = 'block'; // Text wieder einblenden, wenn nichts eingegeben wurde
-        input.style.display = 'none'; // Texteingabefeld ausblenden
+        emailInput.style.display = 'none'; // Texteingabefeld ausblenden
       }
     });
   
@@ -39,6 +41,34 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hier setzt du die Weiterleitungs-URL ein, zu der der Button führen soll
         window.location.href = 'registrieren.html';
       });
+
+
+// Function to login using email and password
+async function login() {
+  console.log("Login ausgeführt");
+  const email = emailInput.value;
+  const password = passwortInput.value;
+
+  const { error } = await supa.auth.signIn({ email, password });
+
+  if (error) {
+      console.error("Error during login: ", error.message);
+  } else {
+      console.log("Logged in as ", email);
+      window.location.href = 'http://localhost:5500/index.html'
+
+  }
+
+}anmeldenButton.addEventListener('click', function() {
+  // Hier setzt du die Weiterleitungs-URL ein, zu der der Button führen soll
+  login();
+});
+
+
+
+
+
+
   });
   
 
