@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoGoodies</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
+    <style>
+        /* Abstand zwischen den Elementen */
+        .container {
+            margin-top: 20px;
+            height: auto;
+        }
+
+        .kaestchen {
+            margin-bottom: 10px;
+        }
+
+       /*  Stil für die Fußzeile */
+       .footer {
+            text-align: left;
+            padding: 0;
+            background: rgba(224, 150, 201, 0.60);
+            display: flex;
+            position: fixed;
+            bottom: 0; /* Footer am unteren Bildschirmrand fixieren */
+            width: 100%;
+        }
+
+        /* Füge Stil für den Text in der Mitte des Buttons hinzu */
+        .text {
+            text-align: center;
+        }
+         /* Stil für die einzelnen Buttons im Footer */
+         .footer-button {
+            width: 100%;
+            flex: 1;
+            padding: 10px;
+            background: rgba(224, 150, 201, 0.60);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .footer-button:focus {
+            width: 100%;
+            flex: 1;
+            padding: 10px;
+            background: #E096C9;
+            cursor: pointer;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <script type="module" src="config/config.js"></script>
+    <script type="module" src="scripts/script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family>Audiowide&family=Dosis:wght@200&family=Space+Mono&display=swap" rel="stylesheet">
+
+<!-- Kasten -->
+<div class="kasten"></div>
+
+<!-- Icon "Pfeil-1.svg" oben links -->
+<div style="width: 27px; height: 16px; flex-shrink: 0; position: absolute; top: 13px; left: 7px;">
+    <img src="Pfeil-1.svg" alt="Pfeil Icon">
+</div>
+
+<!-- Icon "benutzer-2.png" mit angegebenem Layout -->
+<div style="width: 152px; height: 152px; flex-shrink: 0; margin:auto; margin-top: 122px;">
+    <img src="benutzer-2.png" alt="Benutzer Icon">
+</div>
+
+    <!-- Vorname User -->
+    <div class="container">
+        <div class="kaestchen">
+            <div class="content">
+                <p class="text" id="placeholder">Vorname User</p>
+                <input type="text" class="input" id="inputField">
+            </div>
+        </div>
+
+        <!-- Nachname User -->
+        <div class="kaestchen">
+            <div class "content">
+                <p class="text" id="placeholder">Nachname User</p>
+                <input type="text" class="input" id="inputField">
+            </div>
+        </div>
+
+        <!-- Benutzername -->
+        <div class="kaestchen">
+            <div class="content">
+                <p class="text" id="placeholder">Benutzername</p>
+                <input type="text" class="input" id="inputField">
+            </div>
+        </div>
+
+        <!-- Anzahl Sterne -->
+        <div class="kaestchen">
+            <div class="content">
+                <p class="text" id="placeholder">Anzahl Sterne</p>
+                <input type="text" class="input" id="inputField">
+            </div>
+        </div>
+
+        <!-- Abmelden-Button -->
+        <button class="anmelden-button">
+            <span class="anmelden-button-text">abmelden</span>
+        </button>
+    </div>
+
+  <!-- Fußzeile mit Icon im ersten Button und den restlichen Buttons gleichmäßig verteilt -->
+<div class="footer" style="display: flex; justify-content: space-between;">
+    <div class="footer-button">
+        <img src="benutzer-1.png" alt="Benutzer Icon">
+    </div>
+    <div class="footer-button">
+        <img src="zug-2.png" alt="Benutzer Icon">
+    </div>
+    <div class="footer-button">
+        <img src="stern-1.png" alt="Benutzer Icon">
+    </div>
+</div>
+</body>
+
+</html>
