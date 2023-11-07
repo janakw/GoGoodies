@@ -1,4 +1,4 @@
-console.log("Initialisierung Supabase");
+
 
 // Supabase Initialisierung
 const supabaseUrl = 'https://xgqaqvefiaydtcmvogvh.supabase.co'

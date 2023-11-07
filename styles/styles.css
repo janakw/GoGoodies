@@ -1,12 +1,19 @@
-<<<<<<< Updated upstream
 /* Die Schriftart 'Audiowide' importieren */
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
+
 
 /*Login Page*/
 
 /* Für alle Textelemente auf der Seite die Schriftart 'Audiowide' verwenden */
 body {
     font-family: 'Audiowide', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 #loginPage {
@@ -24,22 +31,11 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 233px;
   /*  muessi no hinzufiege klappt aber grad nit 
     width: 287px;
     height: 140px; */
   }
 
-  .ueberschrift {
-    color: #000;
-    text-align: center;
-    font-family: Audiowide;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 10px; /* Fügt 20px Abstand zu allen Seiten hinzu */
-}
 
 /* E-Mail oder Benutzername */
 .container {
@@ -49,7 +45,7 @@ body {
     flex-direction: column; /* Ändere die Richtung auf column, um die Elemente untereinander anzuzeigen */
   }
   
-  .kaestchen {
+.kaestchen {
     width: 300px;
     height: 40px;
     background: #E0D9AD;
@@ -58,11 +54,7 @@ body {
     display: block; /* Ändere display auf block, um die Elemente vertikal anzuzeigen */
     margin-top: 2px ; /* Fügt 20px Margin oben und unten hinzu */
   }
-  
-  /* Passwort */
-  .kaestchen.passwort {
-    margin: 20px ; /* Fügt 20px Margin oben und unten hinzu */
-  }
+
   
   .content {
     display: flex;
@@ -146,15 +138,766 @@ body {
     line-height: normal;
   }
  
+/*Registrieren Page*/
+
+
+
+/*Login Page*/
+
+/* Für alle Textelemente auf der Seite die Schriftart 'Audiowide' verwenden 
+
+ALLI ABSTÄND NOMOL SUBER ALUEGE*/
+
+
   
+  .registrieren-title {
+    margin-top: 18px;
+    margin-bottom: 99px;
+    color: #000;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+  }
   
-
-
-
-
+  .ueberschrift {
+    color: #000;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px; /* Ändere den Abstand zu 160px */
+    display: block;
+  }
   
-=======
-body {
-    background-color: blue;
+  .kaestchen {
+    width: 300px;
+    height: 40px;
+    background: #E0D9AD;
+    border-radius: 20px;
+    flex-shrink: 0;
+    display: block; /* Ändere display auf block, um die Elemente vertikal anzuzeigen */
+    margin-top: 2px ; /* Fügt 20px Margin oben und unten hinzu */
+    margin-bottom: 10px;
+  }
+  
+  .kaestchen.benutzername {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .kaestchen.passwort {
+    margin-bottom: px;
+  }
+
+  .kaestchen.passwort.wiederholen {
+    margin-bottom: 40px;
 }
->>>>>>> Stashed changes
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .input {
+    display: none;
+  }
+  
+  .ueberschrift2 {
+    color: #000;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .Konto-erstellen {
+    background: #E096C9;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-top: 4px;
+    margin-bottom: 69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .Konto-erstellen-text {
+    color: #000;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+
+*{    
+    /* stern bedeutet select all; alle hmtl elemente bekommen dieses styling vorerst*/
+    
+    color: black;
+    font-family: Audiowide;
+    font-weight: 400;
+    word-wrap: break-word;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#wrapperHeader {
+    /* Fügen Sie hier die Regeln für #wrapperHeader hinzu */
+
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+  
+
+    
+    
+}
+.containerHeader {
+
+    width: 30%;
+    display: flex;
+    justify-content: center; 
+
+}
+
+
+.header-title {
+   
+    text-align: center;
+    font-size: 10px;
+    
+}
+
+#buttonAbmelden {
+   
+    background: #E096C9;
+    border-radius: 20px;
+    border: 0; 
+        /* rand um button entfernen */
+}
+
+
+
+#wrapperMain {
+    /* Fügen Sie hier die Regeln für #wrapperMain hinzu */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: flex-start;
+
+}
+
+#linieZug {
+    width: 75%;
+    height: 0px;
+  
+    border: 1px black solid;
+}
+
+#mainIconZug {
+    width: 30px;
+    height: 30px;
+
+    
+    margin-right: auto;
+    margin-left: 13%;  
+        /* zug animieren mit % */
+
+    
+}
+
+#überschriftSwipe {
+    width: 100%;
+    height: 30%;
+
+    padding-top: 10%;
+    
+    text-align: center;
+   
+    font-size: 25px;
+
+}
+
+
+#infoZeit {
+
+    width: 100%;
+    height: 20%;
+
+    
+    text-align: center;
+   
+
+
+}
+
+#containerSwipe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#backgroundSwipe {
+    width: 218px;
+    height: 85px;
+    
+    background: #F0E8B9;
+    border-radius: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#buttonSwipe {
+    width: 77px;
+    height: 77px;
+
+    margin-right: auto;
+    margin-left: 2%;  
+                   /* mit % animierbar 2-98% */
+    background: #97E096;
+    border-radius: 9999px;
+  }
+
+
+  /* hier erstelle ich key-frames für swipe-animation */
+  @keyframes swipeGoAnimation { 
+    0% {
+      margin-left: 2%;
+    }
+    100% {
+      margin-left: 63%;
+    }
+  }
+
+
+  @keyframes swipeStopAnimation {
+    0% {
+        margin-left: 63%;
+      }
+    100% {
+      margin-left: 2%;
+    }
+    
+  }
+
+
+/* hier erstelle ich class die animation aufruft & parameter von animatoin definieren */
+.swipeGo{
+    animation-name:  swipeGoAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  
+  }
+
+
+.swipeStop{ 
+    animation-name:  swipeStopAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+  
+  }
+
+
+  
+ 
+  
+
+
+
+#anweisungSwipe {
+    width: 100%;
+    height: 36px;
+    
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    padding-top: 5%;
+  
+}
+
+#wrapperFooter {
+    /* Fügen Sie hier die Regeln für #wrapperFooter hinzu */
+    width: 100%; 
+    height: 100%; 
+    background: #E096C9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.containerIcon{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.containerIcon img {
+    width: 45px;
+    height: 45px;
+   
+}
+
+
+*{    
+    /* stern bedeutet select all; alle hmtl elemente bekommen dieses styling vorerst*/
+    
+    color: black;
+    font-family: Audiowide;
+    font-weight: 400;
+    word-wrap: break-word;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+#wrapperHeader {
+    /* Fügen Sie hier die Regeln für #wrapperHeader hinzu */
+
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+  
+
+    
+    
+}
+.containerHeader {
+
+    width: 30%;
+    display: flex;
+    justify-content: center; 
+
+}
+
+#buttonAbmelden {
+   
+    background: #E096C9;
+    border-radius: 20px;
+    /* border: 0; */ 
+        /* rand um button entfernen */
+}
+
+
+
+#wrapperMain {
+    /* Fügen Sie hier die Regeln für #wrapperMain hinzu */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: flex-start;
+
+}
+
+
+
+#linieZug {
+    width: 75%;
+    height: 0px;
+  
+    border: 1px black solid;
+}
+
+#mainIconZug {
+    width: 30px;
+    height: 30px;
+
+    
+    margin-right: auto;
+    margin-left: 13%;  
+        /* zug animieren mit % */
+
+    
+}
+
+#überschriftSwipe {
+    width: 100%;
+    height: 50%;
+
+    padding-top: 10%;
+    
+    text-align: center;
+   
+    font-size: 25px;
+
+}
+
+#containerSwipe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#backgroundSwipe {
+    width: 218px;
+    height: 85px;
+    
+    background: #F0E8B9;
+    border-radius: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ändere die folgenden Regeln für die h3- und h4-Elemente */
+
+#mainText{
+    text-align: center; /* Horizontal zentrieren */
+    display: flex;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+}
+
+#buttonSwipe {
+    width: 77px;
+    height: 77px;
+
+    margin-right: auto;
+    margin-left: 2%;
+        /* mit % animierbar 2-98% */
+   
+    background: #97E096;
+    border-radius: 9999px;
+}
+
+#anweisungSwipe {
+    width: 100%;
+    height: 36px;
+    
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    padding-top: 5%;
+  
+}
+
+
+*{    
+    /* stern bedeutet select all; alle HTML-Elemente bekommen dieses Styling vorerst */
+    
+    color: black;
+    font-family: Audiowide;
+    font-weight: 400;
+    word-wrap: break-word;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.containerHeader {
+    width: 30%;
+    display: flex;
+    justify-content: center; 
+}
+
+
+#buttonAbmelden {
+    background: #E096C9;
+    border-radius: 20px;
+}
+
+#wrapperMain {
+    /* Fügen Sie hier die Regeln für #wrapperMain hinzu */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#containerZug {
+    width: 100%;
+    height: 110px;
+    background: #E0D9AD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerZugLinie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#linieZug {
+    width: 75%;
+    height: 0px;
+    border: 1px black solid;
+}
+
+#mainIconZug {
+    width: 30px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: 13%;
+}
+
+/* Neue Regeln für das Icon */
+
+.smallcontainerIcon img {
+    width: 15px;
+    height: 15px;
+}
+.rectangle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rectangle {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    margin: 20px;
+    margin-bottom: 60px;
+
+    position: relative; /* Relative Positionierung für das Elternelement (größeres Rechteck) */
+}
+
+.small-rectangle {
+    position: absolute; /* Absolute Positionierung für das kleine Rechteck */
+    top: 0;
+    right: 0;
+    width: 85px;
+    height: 20px;
+    background: #E096C9;
+    display: flex; /* Elemente in horizontaler Zeile anordnen */
+    align-items: center; /* Vertikal zentrieren */
+    justify-content: flex-end; /* Rechts ausrichten */
+}
+
+#goodieDetail {
+    font-size: 13px;
+    margin-top: 130px;
+}
+
+
+#wrapperFooter {
+    /* Fügen Sie hier die Regeln für #wrapperFooter hinzu */
+    width: 100%; 
+    height: 100%; 
+    background: #E096C9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 110px;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #E096C9;
+    border: 2px solid #E096C9;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+    background: white;
+    color: #E096C9;
+}
+
+ /* Abstand zwischen den Elementen */
+ .container {
+  margin-top: 20px;
+  height: auto;
+}
+
+
+/*  Stil für die Fußzeile */
+.footer {
+  text-align: left;
+  padding: 0;
+  background: rgba(224, 150, 201, 0.60);
+  display: flex;
+  position: fixed;
+  bottom: 0; /* Footer am unteren Bildschirmrand fixieren */
+  width: 100%;
+}
+
+/* Stil für die einzelnen Buttons im Footer */
+.footer-button {
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+  background: rgba(224, 150, 201, 0.60);
+  cursor: pointer;
+  text-align: center;
+}
+
+.footer-button:focus {
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+  background: #E096C9;
+  cursor: pointer;
+  text-align: center;
+}
+.rectangle {
+  margin-left: 120px;
+  margin-top: 40px;
+}
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+main {
+  text-align: center;
+  
+}
+.rectangle {
+  margin-left: 120px;
+  margin-top: 40px;
+}
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Füge mehr Abstand zwischen den Elementen hinzu */
+.container {
+  margin-top: 20px;
+}
+
+
+/*  Stil für die Fußzeile */
+.footer {
+  text-align: left;
+  padding: 0; /* Kein oberer und unterer Abstand */
+  background: rgba(224, 150, 201, 0.60); /* Hier ändere die Hintergrundfarbe */
+  display: flex;
+  
+}
+
+/* Stil für den Kasten */
+.kasten {
+  width: 100%;
+  height: 110px;
+  flex-shrink: 0;
+  background-color: #E0D9AD;
+  margin-bottom: 515px;
+}
+
+
+
+/* Stil für den Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #ffff;
+  height: 42px;
+}
+
+/* Stil für den Button im Header */
+.header-button {
+  background: rgba(224, 150, 201, 0.60);
+  border-radius: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #000;
+  font-family: 'Audiowide';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.rectangle {
+  margin-left: 120px;
+  margin-top: 40px;
+}
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+}

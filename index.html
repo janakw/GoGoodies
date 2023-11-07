@@ -5,13 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
-    <title>GoGoodies </title> 
-    <link rel="stylesheet" href="stylevscode-file://vscode-app/private/var/folders/59/yc40wqqs0vxcr5br9dcrvxtr0000gn/T/AppTranslocation/E0D2748E-388F-40D2-9472-5F770B1833C4/d/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-sandbox/workbench/workbench.htmls/styles.css">
-=======
     <title>GoGoodies </title>
     <link rel="stylesheet" href="styles/styles.css">
->>>>>>> Stashed changes
     <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
 
@@ -21,15 +16,49 @@
     <script type="module" src="config/config.js"></script>
     <script type="module" src="scripts/script.js"></script>
 
-    
-
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Dosis:wght@200&family=Space+Mono&display=swap" rel="stylesheet">
 
 
+<!--LoginPage-->
+<h1 class="title">Herzlich willkommen bei</h1>
 
+    <h2 class="ueberschrift">Login:</h2>
+    
+   
+    <!--Email oder Benutzername kästchen-->
+    <div class="container">
+        <div class="kaestchen">
+          <div class="content">
+            <p class="text" id="placeholder">E-Mail</p>
+            <input type="text" class="input" id="emailInputField">
+          </div>
+        </div>
+        
+        <!--Passwort Kästchen-->
+        <div class="kaestchen passwort"> <!-- Verwende eine separate Klasse für das zweite Kästchen -->
+          <div class="content">
+            <p class="text" id="passwortPlaceholder">Passwort</p>
+            <input type="password" class="input" id="passwortInputField">
+          </div>
+        </div>
+        <!-- muss no mit de Startsite in Javascript klinkt wärde-->
+        <button id="anmelden-button" class="anmelden-button">
+            <span class="anmelden-button-text">anmelden</span>
+          </button> 
+          <p class="subtitle">noch kein Account?</p>
+           <button id="registrieren-button" class="registrieren-button"> <!-- Button für die Registrierungsseite -->
+      <span class="registrieren-button-text">registrieren</span>
+    </button>
+      </div>
+
+      
+
+  
+    
+
+        
    
     </body>
     </html>

@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     registrierenButton.addEventListener('click', function() {
         // Hier setzt du die Weiterleitungs-URL ein, zu der der Button führen soll
-        window.location.href = 'registrieren.html';
+        window.location.href = '/pages/registrieren.html';
       });
 
 
 // Function to login using email and password
 async function login() {
-  console.log("Login ausgeführt");
+
   const email = emailInput.value;
   const password = passwortInput.value;
 
@@ -54,12 +54,12 @@ async function login() {
   if (error) {
       console.error("Error during login: ", error.message);
   } else {
-      console.log("Logged in as ", email);
-      window.location.href = 'http://localhost:5500/index.html'
 
+      window.location.href = '/pages/swipeGo.html'
   }
 
-}anmeldenButton.addEventListener('click', function() {
+}
+anmeldenButton.addEventListener('click', function() {
   // Hier setzt du die Weiterleitungs-URL ein, zu der der Button führen soll
   login();
 });

@@ -1,14 +1,15 @@
-console.log ("file_executed: swipeGo.js");
 
 //ABSCHNITT variabeln=============================================================================
 
 import { supa  } from "../config/config.js";
 
-console.log(supa);
+
+
 
 //html-elemente anhand id als variable verknüpfen, damit diese variablen in js aufgerufen/angesteuert werden können
 let überschriftSwipe = document.querySelector("#überschriftSwipe");
 let infoZeit = document.querySelector("#infoZeit");
+
 
 let buttonSwipe = document.querySelector("#buttonSwipe");
 let toggleSwipe = false;  /* button links ist false */
@@ -40,8 +41,6 @@ checkUser();
 
 function eventButtonSwipe() {
   
-console.log("function_executed: eventButtonSwipe");
-
 
 
 
@@ -70,7 +69,7 @@ console.log("function_executed: eventButtonSwipe");
 
 function toggleSwipeButton() {
 
-    console.log("function_executed: toggleSwipeButton");
+
 
     if (toggleSwipe==false) {
             
@@ -90,46 +89,19 @@ function toggleSwipeButton() {
         überschriftSwipe.innerHTML= "Cool bist du mit dem Zug unterwegs";
         infoZeit.innerHTML= "Du bist seit " + fahrZeit + "min unterwegs";
         anweisungSwipe= "Stoppe deine Fahrt";
-        
         //wir stellen auf true um damit wir wissen dass swipeGo schon ausgeführt wurde
         toggleSwipe=true;
-
         updateStartedSwipingTime();
-
-    
-    } else {
-
-        
+    } else { 
 //auf totalTime page weiterleiten
-
         updateFinishedSwipingTime();
-        
-        window.location.href = "../Moritz/Pages/Total_time.html";
-
-
-
-
-        //window.location.href = "Total_time.html"; 
-
-
+        window.location.href = "/pages/Total_time.html";
       /*   if(buttonSwipe.classList.contains("swipeGo")){
-
         buttonSwipe.classList.remove("swipeGo");  
-
         }
-        
         buttonSwipe.classList.add("swipeStop");    
-        
         toggleSwipe=false; */
-
     }
-
-
-
-
-    
-    
-    
 }
 
 
@@ -140,8 +112,7 @@ function toggleSwipeButton() {
 
 
 
-let user_id = '2df3e78b-5b79-4dc3-a4ea-176167e8cbdb'
-
+let user_id = checkUser();
 
     async function updateStartedSwipingTime() {
        
@@ -152,7 +123,7 @@ let user_id = '2df3e78b-5b79-4dc3-a4ea-176167e8cbdb'
         // Perform the update operation
        
         const { data, error } = await supa
-        .from('users_duplicate')
+        .from('users')
         .update({ startedSwipingTime: currentTimestamp })
 
         .eq('user_id', user_id)
@@ -176,7 +147,7 @@ let user_id = '2df3e78b-5b79-4dc3-a4ea-176167e8cbdb'
         // Perform the update operation
        
         const { data, error } = await supa
-        .from('users_duplicate')
+        .from('users')
         .update({ finishedSwipingTime: currentTimestamp })
 
         .eq('user_id', user_id)
@@ -207,67 +178,8 @@ let user_id = '2df3e78b-5b79-4dc3-a4ea-176167e8cbdb'
         
         const { data, error } = await supa.auth.getSession()
 
-        //console.log("data: ", data);
-
-        if (data.session) {
-
-        let user = data.session.user;
-        
-        currentUser = user;
-
-        console.log("infoUser: authenticated as ", data.session.user);
-
-        //updateUserStatus(user);
-
-        } else {
-
-            console.log("infoUser: not authenticated");
-
-            //redirect to login page
-
-            //updateUserStatus(null);
-                
-            }
-    
-    
-        
-        
-
-    
-
-        
-
-    }//ENDE FUNKTION checkUser()
-
-     
-      
-    //FUNKTION registerUser()
-    async function registerUser() {
-            console.log("functionExecuted: registerUser()");
-
-            //checkExistingUser();
-
-
-
-            let mailUser = "aerabaern@hotmail.com";
-            let passUser = "123456"
-            
-            //console.log("mailUser: ", mailUser);
-            //console.log("passUser: ", passUser);
-            
-            const {data, error} = await supa.auth.signUp({
-                email: mailUser,
-                password: passUser
-            })
-
-            if (error) {
-
-                console.log("error: ", error);
-
-                //infoUser.textContent = "Registrierung fehlgeschlagen";
-            }
-
-
-            console.log("data: ", data);
-
+       console.log(data)
     }
+
+
+   

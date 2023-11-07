@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
-   
-    <link rel="stylesheet" href="styles/swipeGo.css"> <!-- Fügen Sie hier den Pfad zu Ihrer CSS-Datei ein -->
-    <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
-    <script type="module" src="config/config.js"></script>
-    <script type="module" src="scripts/swipeGo.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
 
 </head>
 <body>
@@ -35,44 +30,29 @@
 
             <div id="containerZugLinie">
                 
-                <img id="mainIconZug" src="media/zug 2.png" />
+                <img id="mainIconZug" src="../media/zug 2.png" />
                 <div id="linieZug"></div>
             </div>
-
             </div>
-
-
-            <h2 id="überschriftSwipe">Swipe dich zu den Goodies</h2>
-
-            <p id="infoZeit"></p>
-           
+            <h2 id="überschriftSwipe">Wow!</h2>
+            <h2 id="mainText">Du warst XX min unterwegs.</h2>
+            <h2 id="mainText">Das entspricht XX Sternen</h2>
             <div id="containerSwipe">
-
                     <div id="backgroundSwipe">
-
-                    <div id="buttonSwipe" ></div>
-
+                    <div id="buttonSwipe"></div>
                     </div>
-                
-
                 <p id="anweisungSwipe">Starte deine Fahrt</p>
-
             </div>
-                
+            <h5 id="anweisungSwipe">Das sind deine Goodies:</h5>
+
         </div>
     </main>
-    <footer>
-        <div id="wrapperFooter">
-            <div class="containerIcon">
-                <img src="media/benutzer 1.png" />
-            </div>
-            <div class="containerIcon">
-                <img src="media/zug 2.png" />
-            </div>
-            <div class="containerIcon">
-                <img src="media/stern 1.png" />
-            </div>
-        </div>
-    </footer>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
 </body>
 </html>

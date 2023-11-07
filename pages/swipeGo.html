@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swipe</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
+    <script type="module" src="../config/config.js"></script>
+    <script type="module" src="../scripts/swipeGo.js"></script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('afterbegin', data);
+            });
+    </script>
+</head>
+<body>
+    
+    <main>
+        <div id="wrapperMain">
+            <div id="containerZug">
+            <div id="containerZugLinie">
+                <img id="mainIconZug" src="../media/zug 2.png" />
+                <div id="linieZug"></div>
+            </div>
+            </div>
+            <h2 id="überschriftSwipe">Swipe dich zu den Goodies</h2>
+            <p id="infoZeit"></p>
+            <div id="containerSwipe">
+                    <div id="backgroundSwipe">
+                    <div id="buttonSwipe" ></div>
+                    </div>
+                <p id="anweisungSwipe">Starte deine Fahrt</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        fetch('/pages/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>
