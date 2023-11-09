@@ -27,9 +27,7 @@
 
  </head>
 
-<body>
-   
-
+ <body>
     <div class="header">
         <!-- Element links -->
         <div>
@@ -38,8 +36,8 @@
         <!-- Element in der Mitte -->
         <div class="header-title">
             <div style="background: #d9d9d9; color: #000; text-align: center; font-family: 'Audiowide'; font-size: 10px; font-style: normal; font-weight: 400; line-height: 15px; width: 118px;
-            height: 17px;
-            flex-shrink: 0;">
+                height: 17px;
+                flex-shrink: 0;">
                 GoGoodies
             </div>
         </div>
@@ -47,50 +45,42 @@
         <div class="header-title">
             <!-- Textelement "GoGoodies" auf gleicher Höhe wie das Icon -->
             <div style="background-color: #E096C9; color: #000; text-align: center; font-family: 'Audiowide'; font-size: 10px; font-style: normal; font-weight: 400; line-height: 19px; width: 80px;
-            height: 20px; border-radius: 10px;">
+                height: 20px; border-radius: 10px;">
                 Abmelden
             </div>
         </div>
-      
     </div>
-
- 
 
     <!-- Kasten -->
     <div class="kasten" style="display: flex; justify-content: center; align-items: center;">
         <img src="../media/zugmitlinie.png" alt="Zug mit Linie Icon">
     </div>
 
-    <!-- Icon "Pfeil-1.svg" oben links -->
-   
-
-    <!-- Icon "Rectangle-6.png" oben in der Mitte, 12px von oben -->
-    
-
     <!-- Textelement "Deine Gewinn Nummer:" -->
     <div style="width: 300px; height: 36px; flex-shrink: 0; text-align: center; font-family: 'Audiowide'; font-size: 17px; font-style: normal; font-weight: 400; line-height: normal; color: #000; position: absolute; top: 284px; left: 0; right: 0; margin: 0 auto;">
         Deine Gewinn Nummer:
     </div>
 
-    <!-- Textelement "1893" -->
-    <div style="width: 300px; height: 36px; flex-shrink: 0; text-align: center; font-family: 'Audiowide'; font-size: 32px; font-style: normal; font-weight: 400; line-height: normal; color: #000; position: absolute; top: 320px; left: 0; right: 0; margin: 0 auto;">
-        4058
-    </div>
+    <!-- Textelement, das die zufällige Nummer anzeigt -->
+    <div id="randomNumberDisplay" style="width: 300px; height: 36px; flex-shrink: 0; text-align: center; font-family: 'Audiowide'; font-size: 32px; font-style: normal; font-weight: 400; line-height: normal; color: #000; position: absolute; top: 320px; left: 0; right: 0; margin: 0 auto;"></div>
 
     <!-- Textelement "einlösbar in jedem Späti" -->
     <div style="width: 300px; height: 36px; flex-shrink: 0; text-align: center; font-family: 'Audiowide'; font-size: 17px; font-style: normal; font-weight: 400; line-height: normal; color: #000; position: absolute; top: 369px; left: 0; right: 0; margin: 0 auto;">
         einlösbar in jedem Späti
     </div>
 
-
-    <!-- EINFUEGEN footer -->
-    <!-- Fußzeile mit Icon im ersten Button und den restlichen Buttons gleichmäßig verteilt -->
+    <!-- JavaScript-Code, um die zufällige Nummer zu generieren -->
     <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.querySelector('body').insertAdjacentHTML('beforeend', data);
-            });
+        document.addEventListener("DOMContentLoaded", function () {
+            const randomNumberDisplay = document.getElementById("randomNumberDisplay");
+
+            function generateRandomNumber() {
+                const randomNum = Math.floor(Math.random() * 1000); // Hier kannst du den Bereich anpassen, in dem die zufällige Nummer generiert wird.
+                randomNumberDisplay.textContent = randomNum;
+            }
+
+            generateRandomNumber();
+        });
     </script>
 </body>
 
