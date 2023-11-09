@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+
+</head>
+<body>
+    <header>
+        <div id="wrapperHeader">
+
+            <div class="containerHeader"> </div>
+            <div class="containerHeader">
+                <h1 class="header-title">GoGoodies</h1> 
+            </div>
+
+            <div class="containerHeader"> 
+                <button id="buttonAbmelden">abmelden</button>
+            </div>
+
+
+           
+        </div>
+    </header>
+    <main>
+        <div id="wrapperMain">
+            <div id="containerZug">
+
+            <div id="containerZugLinie">
+                
+                <img id="mainIconZug" src="../media/zug 2.png" />
+                <div id="linieZug"></div>
+            </div>
+            </div>
+            <h2 id="überschriftSwipe">Wow!</h2>
+            <h2 id="mainText">Du warst XX min unterwegs.</h2>
+            <h2 id="mainText">Das entspricht XX Sternen</h2>
+            <div id="containerSwipe">
+                    <div id="backgroundSwipe">
+                    <div id="buttonSwipe"></div>
+                    </div>
+                <p id="anweisungSwipe">Starte deine Fahrt</p>
+            </div>
+            <h5 id="anweisungSwipe">Das sind deine Goodies:</h5>
+
+        </div>
+    </main>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>

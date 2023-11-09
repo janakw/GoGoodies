@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seite 1</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+
+</head>
+<body>
+    <!-- Füge den Header mit JavaScript ein -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('afterbegin', data);
+            });
+    </script>
+
+    <main>
+        <!-- Inhalt deiner Seite 1 hier -->
+        <div id="wrapperMain">
+            <div id="containerZug">
+                <div id="containerZugLinie">
+                    <img id="mainIconZug" src="../media/zug 2.png" />
+                    <div id="linieZug"></div>
+                </div>
+            </div>
+            <h1>Gratis Halbtax by SBB
+            </h1>
+            <div class="rectangle">
+                <div class="small-rectangle">
+                    <p>9000</p>
+                    <div class="smallcontainerIcon">
+                        <img src="../media/stern 1.png" />
+                    </div>
+                </div>
+            </div>
+            <p>Mit harter Arbeit und Hingabe hast du unglaubliche 9000 Sterne gesammelt, und jetzt wird deine Treue belohnt! Du hast es dir verdient! Schöni Fahrt!</p>
+            <div class="button-container">
+    <a href="/Gewinnnummeranzeige.html" class="custom-button">Zum Gewinn</a>
+</div>
+        </div>
+    </main>
+
+    <!-- Füge den Footer mit JavaScript ein -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>
