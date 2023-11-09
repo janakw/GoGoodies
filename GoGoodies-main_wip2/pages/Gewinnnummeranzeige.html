@@ -24,33 +24,16 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family>Audiowide&family=Dosis:wght@200&family=Space+Mono&display=swap" rel="stylesheet">
 
-
  </head>
 
  <body>
-    <div class="header">
-        <!-- Element links -->
-        <div>
-            <img src="../media/Pfeil-1.svg" alt="Pfeil Icon">
-        </div>
-        <!-- Element in der Mitte -->
-        <div class="header-title">
-            <div style="background: #d9d9d9; color: #000; text-align: center; font-family: 'Audiowide'; font-size: 10px; font-style: normal; font-weight: 400; line-height: 15px; width: 118px;
-                height: 17px;
-                flex-shrink: 0;">
-                GoGoodies
-            </div>
-        </div>
-        <!-- Element rechts -->
-        <div class="header-title">
-            <!-- Textelement "GoGoodies" auf gleicher Höhe wie das Icon -->
-            <div style="background-color: #E096C9; color: #000; text-align: center; font-family: 'Audiowide'; font-size: 10px; font-style: normal; font-weight: 400; line-height: 19px; width: 80px;
-                height: 20px; border-radius: 10px;">
-                Abmelden
-            </div>
-        </div>
-    </div>
-
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('afterbegin', data);
+            });
+    </script>
     <!-- Kasten -->
     <div class="kasten" style="display: flex; justify-content: center; align-items: center;">
         <img src="../media/zugmitlinie.png" alt="Zug mit Linie Icon">
@@ -82,6 +65,13 @@
             generateRandomNumber();
         });
     </script>
+ <script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('body').insertAdjacentHTML('beforeend', data);
+        });
+</script>
 </body>
 
 </html>
