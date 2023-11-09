@@ -40,9 +40,9 @@ body {
 /* E-Mail oder Benutzername */
 .container {
     display: flex;
-    align-items: center; /* Ändere align-items auf center, um die Elemente vertikal zentriert anzuzeigen */
+    align-items: center; 
     height: 100vh;
-    flex-direction: column; /* Ändere die Richtung auf column, um die Elemente untereinander anzuzeigen */
+    flex-direction: column; 
   }
   
 .kaestchen {

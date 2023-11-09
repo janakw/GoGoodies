@@ -43,26 +43,42 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
 
+// Function to display an error popup
+function displayErrorPopup() {
+  const popup = document.getElementById('errorPopup');
+  popup.style.display = 'block';
+}
+
+// Function to close the error popup
+function closeErrorPopup() {
+  const popup = document.getElementById('errorPopup');
+  popup.style.display = 'none';
+}
+
 // Function to login using email and password
 async function login() {
-
   const email = emailInput.value;
   const password = passwortInput.value;
 
   const { error } = await supa.auth.signIn({ email, password });
 
   if (error) {
-      console.error("Error during login: ", error.message);
+    console.error("Error during login: ", error.message);
+    displayErrorPopup();
   } else {
-
-      window.location.href = '/pages/swipeGo.html'
+    window.location.href = '/pages/swipeGo.html';
   }
-
 }
+
 anmeldenButton.addEventListener('click', function() {
-  // Hier setzt du die Weiterleitungs-URL ein, zu der der Button führen soll
   login();
 });
+
+// Close the error popup when the close button is clicked
+document.getElementById('closeErrorPopupButton').addEventListener('click', function() {
+  closeErrorPopup();
+});
+
 
 
 
