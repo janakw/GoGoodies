@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>GoGoodies</title>
+
+    <!-- EINBINDEN CSS -->
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <!--EINFUEGEN header -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('afterbegin', data);
+            });
+    </script>
+
+    <main>
+        <!-- Inhalt deiner Seite 1 hier -->
+        <div id="wrapperMain">
+            <div id="containerZug">
+                <div id="containerZugLinie">
+                    <img id="mainIconZug" src="../media/zug 2.png" />
+                    <div id="linieZug"></div>
+                </div>
+            </div>
+            <h1>Gratis Zugfahrt by SBB</h1>
+            <div class="rectangle">
+                <div class="small-rectangle">
+                    <p>4000</p>
+                    <div class="smallcontainerIcon">
+                        <img src="../media/stern 1.png" />
+                    </div>
+                </div>
+            </div>
+            <p>Mit harter Arbeit und Hingabe hast du unglaubliche 4000 Sterne gesammelt, und jetzt wird deine Treue belohnt! Du erhälst eine gratis Zugfahrt. Einzulösen innerhalb den nächsten 24h.</p>
+            <div class="button-container">
+                <a href="Gewinnnummeranzeige.html" class="custom-button">Zum Gewinn</a>
+            </div>
+        </div>
+    </main>
+
+    <!--EINFUEGEN footer -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>

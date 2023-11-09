@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoGoodies: Registrieren </title>
+
+    <!-- EINBINDEN Javascript -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
+
+   <!--  AUSKOMMENTIERT: sonst lädt es 2 verschiedene Versionen von Supabase -> Probleme -->
+   <!--  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script> --> 
+
+   <script type="module" src="../config/config.js"></script>
+   <script type="module" src="../scripts/registrieren_script.js"></script>
+
+   <!-- EINBINDEN CSS -->
+   <link rel="stylesheet" href="../styles/styles.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Dosis:wght@200&family=Space+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+
+
+<div class="container">
+  <h1 class="registrieren-title">Registrieren</h1>
+
+  <h2 class="ueberschrift">Anmeldedaten:</h2>
+  
+  
+  <form class="container">
+    <div class="kaestchen email">
+        <div class="content">
+            <p class="text" id="emailplaceholder">E-Mail</p>
+            <input type="text" class="input" id="emailinputField">
+        </div>
+    </div>
+
+    <h2 class="ueberschrift2">Passwort:</h2>
+
+    <div class="kaestchen passwort">
+        <div class="content">
+            <p class="text" id="passwortPlaceholder">Passwort</p>
+            <input type="password" class="input" id="passwortInputField">
+        </div>
+    </div>
+
+    <div class="kaestchen passwort wiederholen">
+        <div class="content">
+            <p class="text" id="passwortwiederholenPlaceholder">Passwort wiederholen</p>
+            <input type="password" class="input" id="passwortwiederholenInputField">
+        </div>
+    </div>
+
+  <button type="button" id="Kontoerstellen" class="Konto-erstellen"> <!-- Button für die Registrierungsseite -->
+    <span class="Konto-erstellen-text">Konto erstellen</span>
+  </button>
+
+
+
+</form>
+
+  
+</html>
+
+
+
+
+
+
