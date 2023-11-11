@@ -45,4 +45,25 @@ checkUser();
   
   
     }//ENDE FUNKTION checkUser()
+// Datenbankabfrage
+const { data, error } = await supa
+    .from('users')
+    .select('totalSwipingTime')
+    .eq('user_id', user_id)
 
+// Die abgerufene Zeit aus der Datenbank
+const abgerufeneZeit = data ? data[0].totalSwipingTime : 0; // Annahme: Falls die Daten erfolgreich abgerufen wurden
+
+// Funktion zum Aktualisieren des HTML-Texts mit der abgerufenen Zeit
+function updateWischZeitHTML(abgerufeneZeit) {
+    // HTML-Element, das die Zeit anzeigen soll
+    const anweisungAfterSwipeElement = document.getElementById('anweisungAfterSwipe');
+
+    // Prüfung, ob das Element existiert, bevor die Änderungen durchgeführt werden
+    if (anweisungAfterSwipeElement) {
+        anweisungAfterSwipeElement.textContent = `Du warst ${abgerufeneZeit} min unterwegs.`;
+    }
+}
+
+// Die Funktion zur Aktualisierung des HTML-Elements mit der abgerufenen Zeit aufrufen
+updateWischZeitHTML(abgerufeneZeit);

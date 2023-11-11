@@ -247,18 +247,6 @@ ALLI ABSTÄND NOMOL SUBER ALUEGE*/
   }
 
 
-*{    
-    /* stern bedeutet select all; alle hmtl elemente bekommen dieses styling vorerst*/
-    
-    color: black;
-    font-family: Audiowide;
-    font-weight: 400;
-    word-wrap: break-word;
-
-    margin: 0;
-    box-sizing: border-box;
-}
-
 header{
     width: 100%;
     height: 7%;
@@ -354,13 +342,13 @@ footer{
 
 #überschriftSwipe {
     width: 100%;
-    height: 30%;
+    height: 70px;
 
-    padding-top: 10%;
+    padding-top: 40px;
     
     text-align: center;
    
-    font-size: 25px;
+    font-size: 23px;
 
 }
 
@@ -368,7 +356,8 @@ footer{
 #infoZeit {
 
     width: 100%;
-    height: 20%;
+    height: 80px;
+    padding-top: 80px;
 
     
     text-align: center;
@@ -379,6 +368,7 @@ footer{
 
 #containerSwipe{
     width: 100%;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -467,8 +457,27 @@ footer{
     text-align: center;
     color: black;
     font-size: 15px;
-    padding-top: 5%;
+    padding-top: 30px;
   
+}
+#anweisungAfterSwipe {
+  width: 100%;
+  height: 36px;
+  
+  text-align: center;
+  color: black;
+  font-size: 23px;
+  padding-top: 20px;
+
+}
+#AfterSwipe {
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  height: 36px;
+  padding-top: 50px;
+  padding-left: 135px;
 }
 
 #wrapperFooter {
@@ -577,25 +586,6 @@ footer{
     
 }
 
-#überschriftSwipe {
-    width: 100%;
-    height: 50%;
-
-    padding-top: 10%;
-    
-    text-align: center;
-   
-    font-size: 25px;
-
-}
-
-#containerSwipe{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 #backgroundSwipe {
     width: 218px;
@@ -629,30 +619,6 @@ footer{
    
     background: #97E096;
     border-radius: 9999px;
-}
-
-#anweisungSwipe {
-    width: 100%;
-    height: 36px;
-    
-    text-align: center;
-    color: black;
-    font-size: 15px;
-    padding-top: 5%;
-  
-}
-
-
-*{    
-    /* stern bedeutet select all; alle HTML-Elemente bekommen dieses Styling vorerst */
-    
-    color: black;
-    font-family: Audiowide;
-    font-weight: 400;
-    word-wrap: break-word;
-
-    margin: 0;
-    box-sizing: border-box;
 }
 
 .containerHeader {
@@ -719,15 +685,75 @@ footer{
     justify-content: center;
 }
 
-.rectangle {
+.detailTitle {
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+
+.rectangle-1 {
     width: 120px;
     height: 120px;
     flex-shrink: 0;
     background: #D9D9D9;
     margin: 20px;
-    margin-bottom: 60px;
-
+    margin-bottom: 40px;
     position: relative; /* Relative Positionierung für das Elternelement (größeres Rechteck) */
+    background-size: cover;
+    background-image: url('/GoGoodies-main_wip2/media/migros.png');
+
+
+
+}
+
+#detail{
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+}
+
+
+.rectangle-2 {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  margin: 20px;
+  margin-bottom: 40px;
+  position: relative; /* Relative Positionierung für das Elternelement (größeres Rechteck) */
+  background-size: cover;
+  background-image: url('/GoGoodies-main_wip2/media/selecta.png');
+
+
+
+}
+.rectangle-3 {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  background: #D9D9D9;
+  margin: 20px;
+  margin-bottom: 40px;
+  position: relative; /* Relative Positionierung für das Elternelement (größeres Rechteck) */
+  background-size: cover;
+  background-image: url('/GoGoodies-main_wip2/media/zugfahrt.png');
+
+
+
+}
+.rectangle-4 {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  background: #D9D9D9;
+  margin: 20px;
+  margin-bottom: 40px;
+  position: relative; /* Relative Positionierung für das Elternelement (größeres Rechteck) */
+  background-size: cover;
+  background-image: url('/GoGoodies-main_wip2/media/halbtax.png');
+  
+
+
+
 }
 
 .small-rectangle {
@@ -736,7 +762,7 @@ footer{
     right: 0;
     width: 85px;
     height: 20px;
-    background: #E096C9;
+    background: rgba(224, 217, 173, 0.8);
     display: flex; /* Elemente in horizontaler Zeile anordnen */
     align-items: center; /* Vertikal zentrieren */
     justify-content: flex-end; /* Rechts ausrichten */
@@ -760,16 +786,9 @@ footer{
 
 
 
-.button-container {
-    text-align: center;
-    margin-top: 20px;
+.custom-button {
     display: flex;
     justify-content: center;
-    margin-left: 110px;
-}
-
-.custom-button {
-    display: inline-block;
     padding: 10px 20px;
     background: #E096C9;
     border: 2px solid #E096C9;
@@ -822,10 +841,6 @@ footer{
   cursor: pointer;
   text-align: center;
 }
-.rectangle {
-  margin-left: 120px;
-  margin-top: 40px;
-}
 p {
   margin-left: 10px;
   margin-right: 10px;
@@ -835,10 +850,7 @@ main {
   text-align: center;
   
 }
-.rectangle {
-  margin-left: 120px;
-  margin-top: 40px;
-}
+
 p {
   margin-left: 10px;
   margin-right: 10px;
@@ -893,11 +905,12 @@ p {
   font-weight: 400;
   line-height: normal;
 }
-.rectangle {
-  margin-left: 120px;
-  margin-top: 40px;
-}
 p {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+#anzahlSterne {
+  width: 20px;
+  height: 20px;
 }

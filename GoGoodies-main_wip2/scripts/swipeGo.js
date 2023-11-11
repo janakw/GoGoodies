@@ -16,7 +16,7 @@ let buttonSwipe = document.querySelector("#buttonSwipe");
 let toggleSwipe = false;  /* button links ist false */
 let anweisungSwipe = document.querySelector("#anweisungSwipe");
 
-let fahrZeit = 13;
+let fahrZeit = 0;
 
 
 
