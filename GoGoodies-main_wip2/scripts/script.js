@@ -150,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
       user_id = user.id;
       
       console.log("user_id: ", user_id);
+      localStorage.setItem("user_id", user_id);
+
 
       //wenn BEREITS eingeloggt auf swipe go page weiterleiten
       window.location.href = 'pages/swipeGo.html'
