@@ -21,3 +21,6 @@ Die Zusammenarbeit mit GitHub war ebenfalls nicht reibungslos. Insbesondere bei 
 Die Umstellung des SFTP-Hosts von HTW Chur zu FHGR während des Semesters stellte eine zusätzliche Herausforderung dar. Eine frühzeitige Information über derartige Änderungen in der Serverstruktur würde den Student*innen Zeit und Mühe ersparen.
 
 Diese Erkenntnisse werden uns helfen, zukünftige Projekte effizienter anzugehen und die Zusammenarbeit sowie die technische Umsetzung weiter zu optimieren.
+
+
+
