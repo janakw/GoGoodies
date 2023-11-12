@@ -30,6 +30,8 @@ checkUser();
         user_id = user.id;
         
         console.log("user_id: ", user_id);
+        localStorage.setItem("user_id", user_id);
+
   
   
         }   else {

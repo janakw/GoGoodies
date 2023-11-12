@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //FUNKTION logout()
     async function logout() {
+        localStorage.removeItem("user_id");
 
         try {
         // Call the signOut method to log the user out
@@ -207,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
         user_id = user.id;
         
         console.log("user_id: ", user_id);
-  
+        localStorage.setItem("user_id", user_id);
          //wenn BEREITS eingeloggt auf swipe go page weiterleiten
         window.location.href = 'swipeGo.html'
   
